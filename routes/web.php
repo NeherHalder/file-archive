@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::group(['namespace'=>'Admin', 'middleware'=>['auth']], function(){
 	Route::resource('files','FileUplodingController');
 	Route::resource('categories','CategoryController');
+	Route::get('/search', 'SearchController@create');
 });
 
 

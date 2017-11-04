@@ -5,7 +5,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="header">
-                    <h4 class="title">Email Statistics</h4>
+                    <h4 class="title">Files Statistics</h4>
                     <p class="category">Last Campaign Performance</p>
                 </div>
                 <div class="content">

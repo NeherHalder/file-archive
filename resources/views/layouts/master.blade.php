@@ -34,20 +34,15 @@
             @include('layouts.partials._footer')
         </div>
     </div>
-
-    <!-- <script src="{{ asset('js/jquery-1.10.2.js') }}"></script>     -->
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <script src="{{ asset('js/jquery-1.10.2.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/bootstrap-checkbox-radio-switch.js') }}"></script>
     <script src="{{ asset('js/chartist.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap-notify.js') }}"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="{{ asset('js/light-bootstrap-dashboard.js') }}"></script>
-    <!-- <script src="{{ asset('js/demo.js') }}"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  -->
-
+    <script src="{{ asset('js/demo.js') }}"></script>
     @yield('script')
 </body>
 </html>

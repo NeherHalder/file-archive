@@ -5,7 +5,12 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="header">
-                    <h4 class="title">Categories->Edit</h4>
+                    <div class="row">	
+			<div class="col-md-6">	
+				<h4 class="title">Categories >> Edit</h4>
+			</div>
+			@include('layouts.common.back')
+            		</div>
                 </div>
                 <div class="content">                    
 		<form method="post" action="{{route('categories.update',[$category])}}">

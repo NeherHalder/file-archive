@@ -13,19 +13,27 @@
                     <p>Dashboard</p>
                 </a>
             </li>
-            
+
             <li>
                 <a href="{{route('categories.index')}}">
                     <i class="pe-7s-note2"></i>
                     <p>Categories</p>
                 </a>
             </li>
+            
             <li>
                 <a href="{{route('files.create')}}">
                     <i class="pe-7s-note2"></i>
                     <p>Archives</p>
                 </a>
-            </li>           
+            </li>  
+
+             <li>
+                <a href="{{url('/search')}}">
+                    <i class="pe-7s-search"></i>
+                    <p>Searching</p>
+                </a>
+            </li>        
            
             <li>
                 <a href="#">

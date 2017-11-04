@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
+<script type="text/javascript">
+    var id=0;
+</script>
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -45,19 +48,19 @@
                         </div>                                   
 
                         <div class="row block">
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Page 1</label>
-                                    <input type="file" name="[file]">
+                                    <input type="file" name="[file]" class="btn btn-success" required>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Tag</label>
                                     <input type="text" class="form-control" name="[tag]">
                                 </div>
                             </div> 
-                            <div class="col-md-offset-6"></div>                           
+                            <div class="col-md-offset-5"></div>                           
                          </div>                         
 
                          <div class="row">
@@ -76,12 +79,13 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
         $('.add').click(function () {
-
-            $('.block:last').after('<div class="row block"><div class="col-md-2"><div class="form-group"><label>Next Page</label><input type="file" name="[file]"></div></div><div class="col-md-4">          <div class="form-group">  <label>Tag</label>  <input type="text" class="form-control" name="[tag]"> </div></div> <div class="col-md-6">                              <div class="form-group">                                     <button type="button" class="btn btn-danger remove" style="margin-top: 23px">X</button>                                  </div>                            </div>                         </div>'); // make sure to add the div too
+            id++;
+            $('.block:last').after('<div id="'+id+'div" class="row block"><div class="col-md-3"><div class="form-group"><label>Next Page</label><input type="file" name="[file]" class="btn btn-success" required></div></div><div class="col-md-3">          <div class="form-group">  <label>Tag</label>  <input type="text" class="form-control" name="[tag]"> </div></div> <div class="col-md-6">                              <div class="form-group">                                     <button id="'+id+'" type="button" class="btn btn-danger remove" style="margin-top: 23px">X</button>                                  </div>                            </div>                         </div>'); // make sure to add the div too
         });
 
-        $('body').on('click', '.remove', function () { // use event delegation because you're adding to the DOM
-            $(this).parent('.block').remove();
+
+        $('body').on('click', '.remove', function () {
+            $('#'+this.id+'div').remove();            
         });
     </script>
 @endsection
